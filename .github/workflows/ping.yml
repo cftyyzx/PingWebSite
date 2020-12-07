@@ -4,7 +4,7 @@ on:
   push:
     branches: [ master ]
   schedule: 
-    - cron: '*/10 * * * *' #every 10 minutes
+    - cron: '*/1 * * * *' #every 10 minutes
 jobs:
   ping:
 
@@ -19,4 +19,4 @@ jobs:
     - name: Install dependencies
       run: dotnet tool restore
     - name: Run
-      run: dotnet tool run Web.Ping --host http://www.zkea.net
+      run: dotnet tool run Web.Ping --host https://mypanpan.glitch.me/
